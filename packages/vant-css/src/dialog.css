@@ -53,7 +53,14 @@
   &__confirm {
     &,
     &:active {
-      color: $blue;
+      color: #e9a614;
+    }
+  }
+
+  &__cancel {
+    &,
+    &:active {
+      color: #d9d9d9;
     }
   }
 
