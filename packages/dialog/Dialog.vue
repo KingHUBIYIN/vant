@@ -9,22 +9,22 @@
       </div>
       <div class="van-hairline--top" :class="b('footer', { 'buttons': showCancelButton && showConfirmButton })">
         <van-button
-          v-show="showCancelButton"
-          :loading="loading.cancel"
-          size="large"
-          :class="b('cancel')"
-          @click="handleAction('cancel')"
-        >
-          {{ cancelButtonText || $t('cancel') }}
-        </van-button>
-        <van-button
           v-show="showConfirmButton"
           size="large"
           :loading="loading.confirm"
-          :class="[b('confirm'), { 'van-hairline--left': showCancelButton && showConfirmButton }]"
+          :class="b('confirm')"
           @click="handleAction('confirm')"
         >
           {{ confirmButtonText || $t('confirm') }}
+        </van-button>
+        <van-button
+          v-show="showCancelButton"
+          :loading="loading.cancel"
+          size="large"
+          :class="[b('cancel'), { 'van-hairline--left': showCancelButton && showConfirmButton }]"
+          @click="handleAction('cancel')"
+        >
+          {{ cancelButtonText || $t('cancel') }}
         </van-button>
       </div>
     </div>
